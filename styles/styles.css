@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body {
+  background: url(../images/pattern-curve.svg) bottom left no-repeat, url(../images/pattern-bg.svg) no-repeat center right 10%, url(../images/pattern-quotes.svg) no-repeat top 20% left 20%;
+  background-size: auto, 612px;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 986px;
+  min-height: 480px;
+  margin: 3rem auto;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  width: 555px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.content .quote-container {
+  min-width: 555px;
+  max-height: 242px;
+}
+
+.content .quote {
+  font-size: 28px;
+  color: #202046;
+  font-weight: 300;
+  margin-bottom: 44px;
+}
+
+.content .name {
+  color: #202046;
+  font-weight: 700;
+}
+
+.content .job {
+  color: #babacf;
+}
+
+.pic {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  height: 480px;
+  width: 480px;
+  z-index: -1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.pic .pic-container {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.swipe-prev {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.swipe-next {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: white;
+  border-radius: 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -24px;
+  right: 336px;
+}
+
+.btn .arrow {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn .arrow img {
+  height: 16px;
+  width: 10px;
+}
+
+@media (max-width: 986px) {
+  body {
+    background: url(../images/pattern-curve.svg) bottom left no-repeat, url(../images/pattern-bg.svg) no-repeat top 18% right 50%, url(../images/pattern-quotes.svg) no-repeat bottom 30% left 50%;
+    background-size: 100%, 324px, 80px;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 6rem auto;
+  }
+  .pic {
+    position: relative;
+    width: 250px;
+    height: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .btn {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+  .content {
+    width: 308px;
+    position: relative;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  .content .quote-container {
+    min-width: 308px;
+    text-align: center;
+  }
+  .content .quote-container .quote {
+    font-size: 1.2rem;
+  }
+  .name,
+  .job {
+    display: block;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
